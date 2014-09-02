@@ -3,7 +3,7 @@ define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'views/side
 function($, _, Backbone, AppConfig, SidebarView, HomeTemplate) {
     var HomeView = Backbone.View.extend({
 
-        el : ".contents",
+        el : "#content",
 
         template: _.template(HomeTemplate),
         
@@ -15,8 +15,8 @@ function($, _, Backbone, AppConfig, SidebarView, HomeTemplate) {
             var that = this;
 
             // Sidebar
-            var sidebarView = new SidebarView();
-            sidebarView.render();
+            //var sidebarView = new SidebarView();
+            //sidebarView.render();
 
             // Content
             $(this.el).empty();
