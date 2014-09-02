@@ -4,7 +4,7 @@ define([ 'jquery', 'underscore', 'backbone',
 
 	var SidebarView = Backbone.View.extend({
 		
-		el: '#body',
+		el: '.menyT',
 
         template: _.template(SidebarTemplate),
 
