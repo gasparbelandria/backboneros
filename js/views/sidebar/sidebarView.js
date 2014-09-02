@@ -3,28 +3,12 @@ define([ 'jquery', 'underscore', 'backbone',
 		Backbone, SidebarTemplate) {
 
 	var SidebarView = Backbone.View.extend({
-
-		tagName: 'div',
 		
-		el: '#sidebar',
+		el: '#body',
 
         template: _.template(SidebarTemplate),
 
-		events: {
-			/*
-			'click #albums': 'showAlbums',
-			'click #contacts': 'showContacts',
-			'click #conversations': 'showConversations',
-			'click #files': 'showFolder',
-			*/
-		},
-
-		initialize : function(options) {
-			//
-		},
-
 		render : function() {
-			console.log('sideBar');
 			this.$el.html(this.template());
 			return this;
 		},

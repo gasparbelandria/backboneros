@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'views/header/headerView', 'views/sidebar/sidebarView', 'text!templates/sidebar/sidebarTemplate.html', 'text!templates/home/homeTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'views/sidebar/sidebarView', 'text!templates/sidebar/sidebarTemplate.html', 'text!templates/home/homeTemplate.html' ], 
 
-function($, _, Backbone, AppConfig, HeaderView, SidebarView, HomeTemplate) {
+function($, _, Backbone, AppConfig, SidebarView, HomeTemplate) {
     var HomeView = Backbone.View.extend({
 
         el : ".contents",
@@ -10,14 +10,9 @@ function($, _, Backbone, AppConfig, HeaderView, SidebarView, HomeTemplate) {
         initialize : function(options) {
             this.config = new AppConfig();
         },
+
         render : function() {
-            console.log('HOMEEEEEE')
-
             var that = this;
-
-            // Header
-            var headerView = new HeaderView();
-            headerView.render();
 
             // Sidebar
             var sidebarView = new SidebarView();
