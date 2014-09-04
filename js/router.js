@@ -28,7 +28,7 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView) {
         ];
 
         app_router.on('route:showContent', function() {
-            var contentView = new ContentView();
+            var contentView = new ContentView(posts);
             contentView.render();
         });
 
