@@ -2,9 +2,9 @@ define(
 		[ 'underscore', 'backbone' ],
 		function(_, Backbone) {
 			var url = location.protocol + "//" + location.host;
-			var REST_URL = url + "/backend";
+			var REST_URL = url + "/backboneros/api";
 			var WEB_URL = url;
-			var WEB_FOLDER = '/backbone/backbone.adminflare/';
+			var WEB_FOLDER = '/backbone/backboneros';
 
 			var AppConfig = Backbone.Model.extend({
 				defaults : {

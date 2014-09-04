@@ -8,7 +8,8 @@ define([
 	var app = app || {};
 
 	app.Posts = Backbone.Collection.extend({
-		model: Article
+		model: Article,
+		url: '/api/articles'
 	});
 
 	return app.Posts;

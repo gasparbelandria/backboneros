@@ -11,6 +11,7 @@ function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, Conte
         initialize : function( data ) {
             this.collection = new Posts( data );
             this.config = new AppConfig();
+            console.log(this.config.get('restpath'));
         },
 
         render : function() {
