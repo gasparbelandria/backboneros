@@ -1,13 +1,15 @@
-define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'libs/meny/meny', 'views/sidebar/sidebarView', 'text!templates/home/homeTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
 
-function($, _, Backbone, AppConfig, meny, SidebarView, HomeTemplate) {
+function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
+
     var HomeView = Backbone.View.extend({
 
-        el : ".contentsT",
+        el : ".contents",
 
-        template: _.template(HomeTemplate),
+        template: _.template(ContentTemplate),
         
-        initialize : function(options) {
+        initialize : function( data ) {
+            this.collection = new Posts( data );
             this.config = new AppConfig();
         },
 
@@ -20,10 +22,19 @@ function($, _, Backbone, AppConfig, meny, SidebarView, HomeTemplate) {
 
             // Content
             $(this.el).empty();
-            console.log(this.template())
-            this.$el.html(this.template());
+
+            this.collection.each(function( item ){
+                this.renderArticle( item );
+            }, this);            
 
             this.meny();
+        },
+
+        renderArticle: function( item ){
+            var articleView = new ArticleView({
+                model:item
+            });
+            this.$el.append( articleView.render().el );
         },
 
         meny : function(){

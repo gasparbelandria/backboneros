@@ -1,10 +1,15 @@
-define([ 'jquery', 'underscore', 'backbone',
-		'text!templates/sidebar/sidebarTemplate.html' ], function($, _,
-		Backbone, SidebarTemplate) {
+define([ 
+'jquery', 
+'underscore', 
+'backbone',
+'text!templates/sidebar/sidebarTemplate.html'
+], function($, _, Backbone, SidebarTemplate) {
 
-	var SidebarView = Backbone.View.extend({
+	var app = app || {};
+
+	app.SidebarView = Backbone.View.extend({
 		
-		el: '.menyT',
+		el: '.meny',
 
         template: _.template(SidebarTemplate),
 
@@ -19,6 +24,6 @@ define([ 'jquery', 'underscore', 'backbone',
 
 	});
 
-	return SidebarView;
+	return app.SidebarView;
 
 });
