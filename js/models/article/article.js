@@ -7,12 +7,17 @@ define([
 	var app = app || {};
 
 	app.Article = Backbone.Model.extend({
+
+		urlRoot: "api/wines",
+
 		defaults: {
+			id: 0,
 			slug: '',
 			title: '',
 			summary: '',
-			body: ''
+			detail: ''
 		}
+
 	});
 
 	return app.Article;

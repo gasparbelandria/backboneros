@@ -18,10 +18,6 @@ define([
 			return this;
 		},
 		
-		showUser: function(){
-			//window.app_router.navigate("user", {trigger: true, replace: true});
-		},
-
 	});
 
 	return app.SidebarView;

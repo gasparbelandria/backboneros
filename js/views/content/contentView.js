@@ -1,4 +1,4 @@
-define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
 
 function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
 
@@ -8,10 +8,12 @@ function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, Conte
 
         template: _.template(ContentTemplate),
         
-        initialize : function( data ) {
-            this.collection = new Posts( data );
+        initialize : function() {
+            var that = this;
             this.config = new AppConfig();
-            console.log(this.config.get('restpath'));
+            this.collection = new Posts();
+            this.listenTo(this.collection, 'reset', this.render);
+            this.collection.fetch({reset: true});
         },
 
         render : function() {
@@ -20,15 +22,14 @@ function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, Conte
             // Sidebar
             var sidebarView = new SidebarView();
             sidebarView.render();
+            this.meny();
 
             // Content
             $(this.el).empty();
-
             this.collection.each(function( item ){
                 this.renderArticle( item );
-            }, this);            
-
-            this.meny();
+            }, this);    
+            
         },
 
         renderArticle: function( item ){
@@ -70,6 +71,7 @@ function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, Conte
             // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
 
             // Embed an iframe if a URL is passed in
+console.log(Meny.getQuery());
             if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
                 var contents = document.querySelector( '.contents' );
                 contents.style.padding = '0px';
