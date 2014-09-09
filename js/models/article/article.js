@@ -8,7 +8,7 @@ define([
 
 	app.Article = Backbone.Model.extend({
 
-		urlRoot: "api/wines",
+		urlRoot: "api/articles",
 
 		defaults: {
 			id: 0,

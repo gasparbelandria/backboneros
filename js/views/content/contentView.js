@@ -27,8 +27,7 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
             // Content
             $(this.el).empty();
             this.collection.each(function( item ){
-                console.log(marked(item.attributes.summary));
-                item.attributes.summary = marked(item.attributes.summary);
+                item.attributes.summary = marked(item.attributes.summary); // parse markdown
                 this.renderArticle( item );
             }, this);    
             
