@@ -23,6 +23,7 @@ require.config({
         jqueryBlockUI           : 'libs/jquery/blockUI',
         jqueryCookie            : 'libs/jquery/cookie',
         meny                    : 'libs/meny/meny.min',
+        markdown                : 'libs/markdown/mmd.min',
 
         // Application libs
 
