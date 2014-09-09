@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
 
-function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
+function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
 
     var HomeView = Backbone.View.extend({
 
@@ -27,6 +27,8 @@ function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, Conte
             // Content
             $(this.el).empty();
             this.collection.each(function( item ){
+                console.log(marked(item.attributes.summary));
+                item.attributes.summary = marked(item.attributes.summary);
                 this.renderArticle( item );
             }, this);    
             
@@ -71,7 +73,7 @@ function($, _, Backbone, AppConfig, Posts, meny, SidebarView, ArticleView, Conte
             // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
 
             // Embed an iframe if a URL is passed in
-console.log(Meny.getQuery());
+
             if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
                 var contents = document.querySelector( '.contents' );
                 contents.style.padding = '0px';
