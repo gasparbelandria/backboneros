@@ -25,7 +25,7 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
         });
 
         app_router.on('route:showArticle', function(slug) {
-            var articleDetailView = new ArticleDetailView({slug:slug});
+            var articleDetailView = new ArticleDetailView({id:slug});
         });
 
         Backbone.history.start();

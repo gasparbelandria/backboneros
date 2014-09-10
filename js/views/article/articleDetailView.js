@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'models/article/article', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/postView', 'text!templates/content/contentTemplate.html' ], 
 
-function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
+function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostView, ContentTemplate) {
 
     var HomeView = Backbone.View.extend({
 
@@ -11,9 +11,16 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
         initialize : function(slug) {
             var that = this;
             this.config = new AppConfig();
-            this.collection = new Posts();
-            this.listenTo(this.collection, 'reset', this.render);
-            this.collection.fetch({reset: true});
+            this.model = new Article(slug);
+
+            
+            this.model.fetch({success: function(data){
+                that.render();
+            }});
+              
+
+            //this.listenTo(this.model, 'set', this.render);
+            //this.model.fetch();
         },
 
         render : function() {
@@ -25,20 +32,22 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
             this.meny();
 
             // Content
+            this.model.attributes.summary = marked(this.model.attributes.summary); // parse markdown
+            console.log(this.model.attributes);
+            $(this.el).empty();
+            var postView = new PostView();
+            this.$el.append( postView.render(this.model.attributes).el );
+
+            /*
             $(this.el).empty();
             this.collection.each(function( item ){
                 item.attributes.summary = marked(item.attributes.summary); // parse markdown
                 this.renderArticle( item );
-            }, this);    
+            }, this);
+            */    
             
         },
 
-        renderArticle: function( item ){
-            var articleView = new ArticleView({
-                model:item
-            });
-            this.$el.append( articleView.render().el );
-        },
 
         meny : function(){
             // Create an instance of Meny
