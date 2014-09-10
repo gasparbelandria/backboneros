@@ -1,10 +1,11 @@
 
-define(['jquery', 'underscore', 'backbone', 'jqueryBlockUI', 'views/appView', 'models/app/AppConfig', 'views/content/contentView'], 
-function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView) {
+define(['jquery', 'underscore', 'backbone', 'jqueryBlockUI', 'views/appView', 'models/app/AppConfig', 'views/content/contentView', 'views/article/articleDetailView'], 
+function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetailView) {
 
     var AppRouter = Backbone.Router.extend({
         routes : {
             ''          : 'showContent',
+            "blog/:id"  : "showArticle",
         }
     });
 
@@ -21,6 +22,10 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView) {
 
         app_router.on('route:showContent', function() {
             var contentView = new ContentView();
+        });
+
+        app_router.on('route:showArticle', function(slug) {
+            var articleDetailView = new ArticleDetailView({slug:slug});
         });
 
         Backbone.history.start();

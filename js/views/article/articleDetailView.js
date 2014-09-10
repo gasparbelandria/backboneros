@@ -8,16 +8,12 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
 
         template: _.template(ContentTemplate),
         
-        initialize : function() {
+        initialize : function(slug) {
             var that = this;
             this.config = new AppConfig();
             this.collection = new Posts();
             this.listenTo(this.collection, 'reset', this.render);
             this.collection.fetch({reset: true});
-        },
-
-        events : {
-            'click .slug': 'showArticle'
         },
 
         render : function() {
@@ -42,11 +38,6 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
                 model:item
             });
             this.$el.append( articleView.render().el );
-        },
-
-        showArticle: function(e){
-            var slug = e.target.attributes.data.value;
-            window.app_router.navigate("blog/"+slug, {trigger: true, replace: true});
         },
 
         meny : function(){

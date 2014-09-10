@@ -9,7 +9,7 @@ define([
 
 	app.Posts = Backbone.Collection.extend({
 		model: Article,
-		url: "api/aticles",		
+		url: "api/articles",		
 	});
 
 	return app.Posts;

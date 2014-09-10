@@ -12,7 +12,7 @@ define([
             this.currentView.close();
         }
         // Hack - clean up any leftover html
-        $('#page').empty();
+        $('#body').empty();
         // Set the new view
         this.currentView = view;
         this.currentView.render();
