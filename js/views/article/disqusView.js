@@ -1,47 +1,37 @@
-define([ 'jquery', 'underscore', 'backbone', 'views/article/disqusView', 'text!templates/article/disqusTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'models/disqus/disqus', 'text!templates/article/disqusTemplate.html' ], 
 
-function($, _, Backbone, DisqusView, DisqusTemplate) {
+function($, _, Backbone, DisqusModel, DisqusTemplate) {
 
     var DisqusView = Backbone.View.extend({
 
-        el : "#disqus_thread",
+        el : "#comments",
 
         template: _.template(DisqusTemplate),
         
-        initialize : function() {
-            var that = this;
-            this.config = new AppConfig();
-            this.collection = new Posts();
-            this.listenTo(this.collection, 'reset', this.render);
-            this.collection.fetch({reset: true});
+        initialize : function( attr ) {
+            this.render(attr);
         },
 
         events : {
-            //'click .slug': 'showArticle'
+            //
         },
 
-        render : function() {
-            var that = this;
+        render : function(attr) {
+            this.$el.html( this.template() );
 
-            // Sidebar
-            var sidebarView = new SidebarView();
-            sidebarView.render();
-            this.meny();
-
-            // Content
-            $(this.el).empty();
-            this.collection.each(function( item ){
-                item.attributes.summary = marked(item.attributes.summary); // parse markdown
-                this.renderArticle( item );
-            }, this);    
-            
-        },
-
-        renderArticle: function( item ){
-            var articleView = new ArticleView({
-                model:item
-            });
-            this.$el.append( articleView.render().el );
+            this.disqus = new DisqusModel();
+            var disqus_obj = {
+                disqus_shortname: 'backboneros',
+                disqus_identifier: attr.slug,
+                disqus_title: attr.title,
+                disqus_url: 'http://backboneros.com/backboneros/#blog/'+attr.slug,
+                disqus_category_id: attr.id
+            };
+            var dsq = document.createElement('script'); 
+                dsq.type = 'text/javascript'; 
+                dsq.async = true;
+                dsq.src = '//' + disqus_obj.disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         },
 
     });

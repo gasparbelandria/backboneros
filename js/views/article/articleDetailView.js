@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'models/article/article', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/postView', 'text!templates/content/contentTemplate.html', 'models/disqus/disqus' ], 
+define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'models/article/article', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/postView', 'text!templates/content/contentTemplate.html', 'views/article/disqusView' ], 
 
-function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostView, ContentTemplate, Disqus) {
+function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostView, ContentTemplate, DisqusView) {
 
     var HomeView = Backbone.View.extend({
 
@@ -33,16 +33,7 @@ function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostVi
             this.$el.append( postView.render(this.model.attributes).el );
 
             // Disqus
-            var disqus_obj = {
-                disqus_shortname: this.model.attributes.title,
-                disqus_identifier: this.model.attributes.slug,
-                disqus_title: this.model.attributes.title,
-                disqus_url: 'http://backboneros.com/backboneros/#blog/'+this.model.attributes.slug,
-                disqus_category_id: this.model.attributes.id
-            };
-            this.disqus = new Disqus(disqus_obj);            
-            console.log(this.disqus);
-
+            this.disqus = new DisqusView(this.model.attributes);            
         },
 
 
