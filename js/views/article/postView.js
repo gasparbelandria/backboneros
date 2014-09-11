@@ -14,7 +14,6 @@ define([
 		template: _.template( ArticleDetailTemplate ),
 
 		render: function( model ){
-			console.log(model)
 			this.$el.html( this.template( model ) );
 			return this;
 		}

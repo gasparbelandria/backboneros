@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'models/article/article', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/postView', 'text!templates/content/contentTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'models/article/article', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/postView', 'text!templates/content/contentTemplate.html', 'models/disqus/disqus' ], 
 
-function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostView, ContentTemplate) {
+function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostView, ContentTemplate, Disqus) {
 
     var HomeView = Backbone.View.extend({
 
@@ -12,15 +12,10 @@ function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostVi
             var that = this;
             this.config = new AppConfig();
             this.model = new Article(slug);
-
-            
             this.model.fetch({success: function(data){
                 that.render();
             }});
               
-
-            //this.listenTo(this.model, 'set', this.render);
-            //this.model.fetch();
         },
 
         render : function() {
@@ -33,19 +28,21 @@ function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostVi
 
             // Content
             this.model.attributes.summary = marked(this.model.attributes.summary); // parse markdown
-            console.log(this.model.attributes);
             $(this.el).empty();
             var postView = new PostView();
             this.$el.append( postView.render(this.model.attributes).el );
 
-            /*
-            $(this.el).empty();
-            this.collection.each(function( item ){
-                item.attributes.summary = marked(item.attributes.summary); // parse markdown
-                this.renderArticle( item );
-            }, this);
-            */    
-            
+            // Disqus
+            var disqus_obj = {
+                disqus_shortname: this.model.attributes.title,
+                disqus_identifier: this.model.attributes.slug,
+                disqus_title: this.model.attributes.title,
+                disqus_url: 'http://backboneros.com/backboneros/#blog/'+this.model.attributes.slug,
+                disqus_category_id: this.model.attributes.id
+            };
+            this.disqus = new Disqus(disqus_obj);            
+            console.log(this.disqus);
+
         },
 
 

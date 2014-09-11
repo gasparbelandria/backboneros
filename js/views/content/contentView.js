@@ -17,7 +17,7 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
         },
 
         events : {
-            'click .slug': 'showArticle'
+            //'click .slug': 'showArticle'
         },
 
         render : function() {
@@ -46,7 +46,7 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
 
         showArticle: function(e){
             var slug = e.target.attributes.data.value;
-            window.app_router.navigate("blog/"+slug, {trigger: true, replace: true});
+            window.app_router.navigate("blog/"+slug, {trigger: true}); // , replace: true
         },
 
         meny : function(){

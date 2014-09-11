@@ -9,6 +9,7 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
         }
     });
 
+
     var initialize = function() {
 
         var app_router = window.app_router = new AppRouter();
@@ -28,7 +29,8 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
             var articleDetailView = new ArticleDetailView({id:slug});
         });
 
-        Backbone.history.start();
+        
+        Backbone.history.start({pushState:true});
 
     };
     return {
