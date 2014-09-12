@@ -19,19 +19,34 @@ function($, _, Backbone, DisqusModel, DisqusTemplate) {
         render : function(attr) {
             this.$el.html( this.template() );
 
+            if( typeof DISQUS != 'undefined' ) { 
+                DISQUS.reset({ 
+                    reload: true, 
+                    config: function () { 
+                        this.page.identifier = attr.id; 
+                        this.page.url = 'http://backboneros.com/backboneros/#!/blog/'+attr.slug; 
+                    } 
+                }); 
+            } 
+
             this.disqus = new DisqusModel();
             var disqus_obj = {
                 disqus_shortname: 'backboneros',
-                disqus_identifier: attr.slug,
+                disqus_identifier: attr.id,
                 disqus_title: attr.title,
-                disqus_url: 'http://backboneros.com/backboneros/#blog/'+attr.slug,
-                disqus_category_id: attr.id
+                disqus_url: 'http://backboneros.com/backboneros/#!/blog/'+attr.slug,
+                disqus_category_id: 'backbonejs'
             };
+
             var dsq = document.createElement('script'); 
                 dsq.type = 'text/javascript'; 
                 dsq.async = true;
                 dsq.src = '//' + disqus_obj.disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+            $.when((document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)).done(function () {
+                //
+            });
+
         },
 
     });

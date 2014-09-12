@@ -5,13 +5,12 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
     var AppRouter = Backbone.Router.extend({
         routes : {
             ''          : 'showContent',
-            "blog/:id"  : "showArticle",
+            "!/blog/:id"  : "showArticle",
         }
     });
 
 
     var initialize = function() {
-
         var app_router = window.app_router = new AppRouter();
 
         Backbone.View.prototype.goTo = function(loc) {
@@ -29,8 +28,7 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
             var articleDetailView = new ArticleDetailView({id:slug});
         });
 
-        
-        Backbone.history.start({pushState:true});
+        Backbone.history.start();
 
     };
     return {
