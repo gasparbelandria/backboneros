@@ -28,6 +28,7 @@ function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostVi
 
             // Content
             this.model.attributes.summary = marked(this.model.attributes.summary); // parse markdown
+            this.model.attributes.detail = marked(this.model.attributes.detail); // parse markdown
             $(this.el).empty();
             var postView = new PostView();
             this.$el.append( postView.render(this.model.attributes).el );

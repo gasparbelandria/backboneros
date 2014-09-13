@@ -34,7 +34,7 @@ audio:not([controls]) {
 }
 
 html {
-  font-size: 100%;
+  /*font-size: 100%;*/
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -154,7 +154,7 @@ textarea {
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   color: #333333;
 }
@@ -661,7 +661,8 @@ address {
 }
 
 small {
-  font-size: 100%;
+  /*font-size: 100%;*/
+  font-size: 6px;
 }
 
 cite {
@@ -672,7 +673,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 12px;
+  /*font-size: 12px;*/
   color: #333333;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
