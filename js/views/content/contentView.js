@@ -32,6 +32,7 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
             $(this.el).empty();
             this.collection.each(function( item ){
                 item.attributes.summary = marked(item.attributes.summary); // parse markdown
+                item.attributes.created = new Date(item.attributes.created);
                 this.renderArticle( item );
             }, this);    
             
