@@ -28,11 +28,19 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
             sidebarView.render();
             this.meny();
 
+            var months = new Array("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic");
+
             // Content
             $(this.el).empty();
             this.collection.each(function( item ){
                 item.attributes.summary = marked(item.attributes.summary); // parse markdown
-                item.attributes.created = new Date(item.attributes.created);
+
+                var d = new Date(item.attributes.created*1000);
+                var c_date = d.getDate();
+                var c_month = d.getMonth();
+                var c_year = d.getFullYear();
+                item.attributes.created = c_date + ' ' + months[c_month] + ' ' + c_year;
+                
                 this.renderArticle( item );
             }, this);    
             
