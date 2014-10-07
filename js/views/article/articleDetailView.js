@@ -27,8 +27,17 @@ function($, _, Backbone, Markdown, AppConfig, Article, meny, SidebarView, PostVi
             this.meny();
 
             // Content
+            var months = new Array("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic");
             this.model.attributes.summary = marked(this.model.attributes.summary); // parse markdown
             this.model.attributes.detail = marked(this.model.attributes.detail); // parse markdown
+            // Spanish format date
+            
+            var d = new Date(this.model.attributes.created*1000);
+            var c_date = d.getDate();
+            var c_month = d.getMonth();
+            var c_year = d.getFullYear();
+            this.model.attributes.created = c_date + ' ' + months[c_month] + ' ' + c_year;
+
             $(this.el).empty();
             var postView = new PostView();
             this.$el.append( postView.render(this.model.attributes).el );

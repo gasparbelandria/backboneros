@@ -9,6 +9,12 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
         }
     });
 
+    var _pageView = function() {
+        var path = Backbone.history.getFragment();
+        ga('send', 'pageview', {page: "/" + path});
+        console.clear();
+        console.log(path);
+    };
 
     var initialize = function() {
         var app_router = window.app_router = new AppRouter();
@@ -25,12 +31,15 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
         });
 
         app_router.on('route:showArticle', function(slug) {
+            _pageView();
             var articleDetailView = new ArticleDetailView({id:slug});
         });
 
+        //app_router.on('route', this._pageView);
+
         Backbone.history.start();
 
-    };
+    };    
     return {
         initialize : initialize
     };
