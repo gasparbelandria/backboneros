@@ -1,0 +1,16 @@
+RewriteEngine on
+
+
+#RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+#RewriteRule (.*) %1? [P]
+
+
+#    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=$
+#    RewriteRule ^$ /index.html [L]
+
+#    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+#    RewriteRule ^$ /%1.html [L]
+
+#RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+#RewriteRule ^$ crawlers.php%1 [QSA,L]
+

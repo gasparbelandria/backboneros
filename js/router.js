@@ -4,8 +4,8 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
 
     var AppRouter = Backbone.Router.extend({
         routes : {
-            ''          : 'showContent',
-            "!/blog/:id"  : "showArticle",
+            ''              : 'showContent',
+            "!/blog/:id"    : "showArticle",
         }
     });
 
@@ -37,7 +37,8 @@ function($, _, Backbone, BlockUI, AppView, AppConfig, ContentView, ArticleDetail
 
         //app_router.on('route', this._pageView);
 
-        Backbone.history.start();
+        //Backbone.history.start();
+        Backbone.history.start({pushState: true});
 
     };    
     return {
