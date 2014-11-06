@@ -1,0 +1,590 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'generator-polymer',
+1 verbose cli   '-g' ]
+2 info using npm@1.2.0
+3 info using node@v0.8.17
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose read json C:\Users\DV6\AppData\Roaming\npm\package.json
+6 verbose read json C:\Users\DV6\AppData\Roaming\npm\package.json
+7 verbose cache add [ 'generator-polymer', null ]
+8 silly cache add name=undefined spec="generator-polymer" args=["generator-polymer",null]
+9 verbose parsed url { pathname: 'generator-polymer',
+9 verbose parsed url   path: 'generator-polymer',
+9 verbose parsed url   href: 'generator-polymer' }
+10 silly lockFile a2821494-generator-polymer generator-polymer
+11 verbose lock generator-polymer C:\Users\DV6\AppData\Roaming\npm-cache\a2821494-generator-polymer.lock
+12 silly lockFile a2821494-generator-polymer generator-polymer
+13 verbose addNamed [ 'generator-polymer', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly lockFile ecf1afb7-generator-polymer generator-polymer@
+16 verbose lock generator-polymer@ C:\Users\DV6\AppData\Roaming\npm-cache\ecf1afb7-generator-polymer.lock
+17 silly addNameRange { name: 'generator-polymer', range: '', hasData: false }
+18 verbose url raw generator-polymer
+19 verbose url resolving [ 'http://registry.npmjs.org/', './generator-polymer' ]
+20 verbose url resolved http://registry.npmjs.org/generator-polymer
+21 info trying registry request attempt 1 at 22:24:18
+22 http GET http://registry.npmjs.org/generator-polymer
+23 http 200 http://registry.npmjs.org/generator-polymer
+24 silly registry.get cb [ 200,
+24 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     etag: '"4JEHVG2X1ESBO1Z2IHB6XJYEM"',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     'content-length': '28833',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     date: 'Thu, 06 Nov 2014 03:24:20 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '0',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-atl6231-ATL',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1415244260.236771,VS0,VE129',
+24 silly registry.get     vary: 'Accept' } ]
+25 silly addNameRange number 2 { name: 'generator-polymer', range: '', hasData: true }
+26 silly addNameRange versions [ 'generator-polymer',
+26 silly addNameRange   [ '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.5',
+26 silly addNameRange     '0.0.6',
+26 silly addNameRange     '0.0.7',
+26 silly addNameRange     '0.0.8',
+26 silly addNameRange     '0.0.9',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.4.0-1',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.5.1' ] ]
+27 verbose addNamed [ 'generator-polymer', '0.5.1' ]
+28 verbose addNamed [ '0.5.1', '0.5.1' ]
+29 silly lockFile dc3271e4-generator-polymer-0-5-1 generator-polymer@0.5.1
+30 verbose lock generator-polymer@0.5.1 C:\Users\DV6\AppData\Roaming\npm-cache\dc3271e4-generator-polymer-0-5-1.lock
+31 silly lockFile 63b6ee3c-ymer-generator-polymer-0-5-1-tgz http://registry.npmjs.org/generator-polymer/-/generator-polymer-0.5.1.tgz
+32 verbose lock http://registry.npmjs.org/generator-polymer/-/generator-polymer-0.5.1.tgz C:\Users\DV6\AppData\Roaming\npm-cache\63b6ee3c-ymer-generator-polymer-0-5-1-tgz.lock
+33 verbose addRemoteTarball [ 'http://registry.npmjs.org/generator-polymer/-/generator-polymer-0.5.1.tgz',
+33 verbose addRemoteTarball   '22dad7b5f54f4d8813e0088b915ef4e432142410' ]
+34 info retry fetch attempt 1 at 22:24:19
+35 verbose fetch to= C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\tmp.tgz
+36 http GET http://registry.npmjs.org/generator-polymer/-/generator-polymer-0.5.1.tgz
+37 http 200 http://registry.npmjs.org/generator-polymer/-/generator-polymer-0.5.1.tgz
+38 silly shasum updated bytes 22903
+39 info shasum 22dad7b5f54f4d8813e0088b915ef4e432142410
+39 info shasum C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\tmp.tgz
+40 verbose tar unpack C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\tmp.tgz
+41 silly lockFile b7817d2d-9332-0-22889931197278202-package C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\package
+42 verbose lock C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\package C:\Users\DV6\AppData\Roaming\npm-cache\b7817d2d-9332-0-22889931197278202-package.lock
+43 silly gunzTarPerm modes [ '755', '644' ]
+44 silly gunzTarPerm extractEntry package.json
+45 silly gunzTarPerm extractEntry script-base.js
+46 silly gunzTarPerm extractEntry util.js
+47 silly gunzTarPerm extractEntry app/index.js
+48 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+49 silly gunzTarPerm extractEntry app/templates/_bower.json
+50 silly gunzTarPerm extractEntry app/templates/_package.json
+51 silly gunzTarPerm extractEntry app/templates/app/app.js
+52 silly gunzTarPerm extractEntry app/templates/app/main.css
+53 silly gunzTarPerm extractEntry app/templates/app/elements.html
+54 silly gunzTarPerm extractEntry app/templates/app/favicon.ico
+55 silly gunzTarPerm extractEntry app/templates/app/htaccess
+56 silly gunzTarPerm extractEntry app/templates/app/index.html
+57 silly gunzTarPerm extractEntry app/templates/app/404.html
+58 silly gunzTarPerm extractEntry app/templates/app/robots.txt
+59 silly gunzTarPerm extractEntry app/templates/app/yo-greeting.css
+60 silly gunzTarPerm extractEntry app/templates/app/yo-greeting.html
+61 silly gunzTarPerm extractEntry app/templates/app/yo-list.css
+62 silly gunzTarPerm extractEntry app/templates/app/yo-list.html
+63 silly gunzTarPerm extractEntry app/templates/bowerrc
+64 silly gunzTarPerm extractEntry app/templates/editorconfig
+65 silly gunzTarPerm extractEntry app/templates/gitattributes
+66 silly gunzTarPerm extractEntry app/templates/gitignore
+67 silly gunzTarPerm extractEntry app/templates/jshintrc
+68 silly gunzTarPerm extractEntry app/templates/test/index.html
+69 silly gunzTarPerm extractEntry app/templates/test/tests.html
+70 silly gunzTarPerm extractEntry app/templates/test/yo-greeting-basic.html
+71 silly gunzTarPerm extractEntry app/templates/test/yo-list-basic.html
+72 silly gunzTarPerm extractEntry changelog.md
+73 silly gunzTarPerm extractEntry el/index.js
+74 silly gunzTarPerm extractEntry el/templates/_element.css
+75 silly gunzTarPerm extractEntry el/templates/_element.html
+76 silly gunzTarPerm extractEntry gh/index.js
+77 silly gunzTarPerm extractEntry gh/templates/gp.sh
+78 silly gunzTarPerm extractEntry readme.md
+79 silly gunzTarPerm extractEntry seed/index.js
+80 silly gunzTarPerm extractEntry seed/templates/bowerrc
+81 silly gunzTarPerm extractEntry seed/templates/_README.md
+82 silly gunzTarPerm extractEntry seed/templates/_demo.html
+83 silly gunzTarPerm extractEntry seed/templates/_index.html
+84 silly gunzTarPerm extractEntry seed/templates/_seed-element.css
+85 silly gunzTarPerm extractEntry seed/templates/_seed-element.html
+86 silly gunzTarPerm extractEntry seed/templates/_bower.json
+87 silly gunzTarPerm extractEntry seed/templates/editorconfig
+88 silly gunzTarPerm extractEntry seed/templates/gitattributes
+89 silly gunzTarPerm extractEntry seed/templates/gitignore
+90 silly gunzTarPerm extractEntry seed/templates/jshintrc
+91 silly gunzTarPerm extractEntry seed/templates/test/index.html
+92 silly gunzTarPerm extractEntry seed/templates/test/seed-element-basic.html
+93 silly gunzTarPerm extractEntry seed/templates/test/tests.html
+94 verbose read json C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\package\package.json
+95 silly lockFile b7817d2d-9332-0-22889931197278202-package C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\package
+96 verbose from cache C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\package\package.json
+97 verbose tar pack [ 'C:\\Users\\DV6\\AppData\\Roaming\\npm-cache\\generator-polymer\\0.5.1\\package.tgz',
+97 verbose tar pack   'C:\\Users\\DV6\\AppData\\Local\\Temp\\npm-10684\\1415244259332-0.22889931197278202\\package' ]
+98 verbose tarball C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+99 verbose folder C:\Users\DV6\AppData\Local\Temp\npm-10684\1415244259332-0.22889931197278202\package
+100 silly lockFile 512281b0-erator-polymer-0-5-1-package-tgz C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+101 verbose lock C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz C:\Users\DV6\AppData\Roaming\npm-cache\512281b0-erator-polymer-0-5-1-package-tgz.lock
+102 silly lockFile 512281b0-erator-polymer-0-5-1-package-tgz C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+103 silly lockFile ee957214--generator-polymer-0-5-1-package C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package
+104 verbose lock C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package C:\Users\DV6\AppData\Roaming\npm-cache\ee957214--generator-polymer-0-5-1-package.lock
+105 silly lockFile ee957214--generator-polymer-0-5-1-package C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package
+106 verbose tar unpack C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+107 silly lockFile ee957214--generator-polymer-0-5-1-package C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package
+108 verbose lock C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package C:\Users\DV6\AppData\Roaming\npm-cache\ee957214--generator-polymer-0-5-1-package.lock
+109 silly gunzTarPerm modes [ '755', '644' ]
+110 silly gunzTarPerm extractEntry package.json
+111 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+112 silly gunzTarPerm extractEntry script-base.js
+113 silly gunzTarPerm modified mode [ 'script-base.js', 438, 420 ]
+114 silly gunzTarPerm extractEntry util.js
+115 silly gunzTarPerm modified mode [ 'util.js', 438, 420 ]
+116 silly gunzTarPerm extractEntry app/index.js
+117 silly gunzTarPerm modified mode [ 'app/index.js', 438, 420 ]
+118 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+119 silly gunzTarPerm modified mode [ 'app/templates/Gruntfile.js', 438, 420 ]
+120 silly gunzTarPerm extractEntry app/templates/app/app.js
+121 silly gunzTarPerm modified mode [ 'app/templates/app/app.js', 438, 420 ]
+122 silly gunzTarPerm extractEntry app/templates/app/main.css
+123 silly gunzTarPerm modified mode [ 'app/templates/app/main.css', 438, 420 ]
+124 silly gunzTarPerm extractEntry app/templates/app/elements.html
+125 silly gunzTarPerm modified mode [ 'app/templates/app/elements.html', 438, 420 ]
+126 silly gunzTarPerm extractEntry app/templates/app/favicon.ico
+127 silly gunzTarPerm modified mode [ 'app/templates/app/favicon.ico', 438, 420 ]
+128 silly gunzTarPerm extractEntry app/templates/app/htaccess
+129 silly gunzTarPerm modified mode [ 'app/templates/app/htaccess', 438, 420 ]
+130 silly gunzTarPerm extractEntry app/templates/app/index.html
+131 silly gunzTarPerm modified mode [ 'app/templates/app/index.html', 438, 420 ]
+132 silly gunzTarPerm extractEntry app/templates/app/404.html
+133 silly gunzTarPerm modified mode [ 'app/templates/app/404.html', 438, 420 ]
+134 silly gunzTarPerm extractEntry app/templates/app/robots.txt
+135 silly gunzTarPerm modified mode [ 'app/templates/app/robots.txt', 438, 420 ]
+136 silly gunzTarPerm extractEntry app/templates/app/yo-greeting.css
+137 silly gunzTarPerm modified mode [ 'app/templates/app/yo-greeting.css', 438, 420 ]
+138 silly gunzTarPerm extractEntry app/templates/app/yo-greeting.html
+139 silly gunzTarPerm modified mode [ 'app/templates/app/yo-greeting.html', 438, 420 ]
+140 silly gunzTarPerm extractEntry app/templates/app/yo-list.css
+141 silly gunzTarPerm modified mode [ 'app/templates/app/yo-list.css', 438, 420 ]
+142 silly gunzTarPerm extractEntry app/templates/app/yo-list.html
+143 silly gunzTarPerm modified mode [ 'app/templates/app/yo-list.html', 438, 420 ]
+144 silly gunzTarPerm extractEntry app/templates/bowerrc
+145 silly gunzTarPerm modified mode [ 'app/templates/bowerrc', 438, 420 ]
+146 silly gunzTarPerm extractEntry app/templates/editorconfig
+147 silly gunzTarPerm modified mode [ 'app/templates/editorconfig', 438, 420 ]
+148 silly gunzTarPerm extractEntry app/templates/gitattributes
+149 silly gunzTarPerm modified mode [ 'app/templates/gitattributes', 438, 420 ]
+150 silly gunzTarPerm extractEntry app/templates/gitignore
+151 silly gunzTarPerm modified mode [ 'app/templates/gitignore', 438, 420 ]
+152 silly gunzTarPerm extractEntry app/templates/jshintrc
+153 silly gunzTarPerm modified mode [ 'app/templates/jshintrc', 438, 420 ]
+154 silly gunzTarPerm extractEntry app/templates/test/index.html
+155 silly gunzTarPerm modified mode [ 'app/templates/test/index.html', 438, 420 ]
+156 silly gunzTarPerm extractEntry app/templates/test/tests.html
+157 silly gunzTarPerm modified mode [ 'app/templates/test/tests.html', 438, 420 ]
+158 silly gunzTarPerm extractEntry app/templates/test/yo-greeting-basic.html
+159 silly gunzTarPerm modified mode [ 'app/templates/test/yo-greeting-basic.html', 438, 420 ]
+160 silly gunzTarPerm extractEntry app/templates/test/yo-list-basic.html
+161 silly gunzTarPerm modified mode [ 'app/templates/test/yo-list-basic.html', 438, 420 ]
+162 silly gunzTarPerm extractEntry app/templates/_bower.json
+163 silly gunzTarPerm modified mode [ 'app/templates/_bower.json', 438, 420 ]
+164 silly gunzTarPerm extractEntry app/templates/_package.json
+165 silly gunzTarPerm modified mode [ 'app/templates/_package.json', 438, 420 ]
+166 silly gunzTarPerm extractEntry changelog.md
+167 silly gunzTarPerm modified mode [ 'changelog.md', 438, 420 ]
+168 silly gunzTarPerm extractEntry el/index.js
+169 silly gunzTarPerm modified mode [ 'el/index.js', 438, 420 ]
+170 silly gunzTarPerm extractEntry el/templates/_element.css
+171 silly gunzTarPerm modified mode [ 'el/templates/_element.css', 438, 420 ]
+172 silly gunzTarPerm extractEntry el/templates/_element.html
+173 silly gunzTarPerm modified mode [ 'el/templates/_element.html', 438, 420 ]
+174 silly gunzTarPerm extractEntry gh/index.js
+175 silly gunzTarPerm modified mode [ 'gh/index.js', 438, 420 ]
+176 silly gunzTarPerm extractEntry gh/templates/gp.sh
+177 silly gunzTarPerm modified mode [ 'gh/templates/gp.sh', 438, 420 ]
+178 silly gunzTarPerm extractEntry readme.md
+179 silly gunzTarPerm modified mode [ 'readme.md', 438, 420 ]
+180 silly gunzTarPerm extractEntry seed/index.js
+181 silly gunzTarPerm modified mode [ 'seed/index.js', 438, 420 ]
+182 silly gunzTarPerm extractEntry seed/templates/_bower.json
+183 silly gunzTarPerm modified mode [ 'seed/templates/_bower.json', 438, 420 ]
+184 silly gunzTarPerm extractEntry seed/templates/bowerrc
+185 silly gunzTarPerm modified mode [ 'seed/templates/bowerrc', 438, 420 ]
+186 silly gunzTarPerm extractEntry seed/templates/gitattributes
+187 silly gunzTarPerm modified mode [ 'seed/templates/gitattributes', 438, 420 ]
+188 silly gunzTarPerm extractEntry seed/templates/gitignore
+189 silly gunzTarPerm modified mode [ 'seed/templates/gitignore', 438, 420 ]
+190 silly gunzTarPerm extractEntry seed/templates/jshintrc
+191 silly gunzTarPerm modified mode [ 'seed/templates/jshintrc', 438, 420 ]
+192 silly gunzTarPerm extractEntry seed/templates/test/index.html
+193 silly gunzTarPerm modified mode [ 'seed/templates/test/index.html', 438, 420 ]
+194 silly gunzTarPerm extractEntry seed/templates/test/seed-element-basic.html
+195 silly gunzTarPerm modified mode [ 'seed/templates/test/seed-element-basic.html', 438, 420 ]
+196 silly gunzTarPerm extractEntry seed/templates/test/tests.html
+197 silly gunzTarPerm modified mode [ 'seed/templates/test/tests.html', 438, 420 ]
+198 silly gunzTarPerm extractEntry seed/templates/editorconfig
+199 silly gunzTarPerm modified mode [ 'seed/templates/editorconfig', 438, 420 ]
+200 silly gunzTarPerm extractEntry seed/templates/_demo.html
+201 silly gunzTarPerm modified mode [ 'seed/templates/_demo.html', 438, 420 ]
+202 silly gunzTarPerm extractEntry seed/templates/_index.html
+203 silly gunzTarPerm modified mode [ 'seed/templates/_index.html', 438, 420 ]
+204 silly gunzTarPerm extractEntry seed/templates/_README.md
+205 silly gunzTarPerm modified mode [ 'seed/templates/_README.md', 438, 420 ]
+206 silly gunzTarPerm extractEntry seed/templates/_seed-element.css
+207 silly gunzTarPerm modified mode [ 'seed/templates/_seed-element.css', 438, 420 ]
+208 silly gunzTarPerm extractEntry seed/templates/_seed-element.html
+209 silly gunzTarPerm modified mode [ 'seed/templates/_seed-element.html', 438, 420 ]
+210 verbose read json C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package\package.json
+211 silly lockFile ee957214--generator-polymer-0-5-1-package C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package
+212 silly shasum updated bytes 22707
+213 info shasum 147d34109205d6f12979daf179d2e8ccf0286f08
+213 info shasum C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+214 verbose from cache C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package\package.json
+215 verbose chmod C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz 644
+216 silly chown skipping for windows C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+217 silly lockFile 63b6ee3c-ymer-generator-polymer-0-5-1-tgz http://registry.npmjs.org/generator-polymer/-/generator-polymer-0.5.1.tgz
+218 silly lockFile dc3271e4-generator-polymer-0-5-1 generator-polymer@0.5.1
+219 silly lockFile ecf1afb7-generator-polymer generator-polymer@
+220 silly resolved [ { name: 'generator-polymer',
+220 silly resolved     version: '0.5.1',
+220 silly resolved     description: 'Yeoman generator for Polymer',
+220 silly resolved     keywords: [ 'yeoman-generator', 'scaffold', 'framework', 'mvc', 'polymer' ],
+220 silly resolved     homepage: 'https://github.com/yeoman/generator-polymer',
+220 silly resolved     bugs: 'https://github.com/yeoman/generator-polymer/issues',
+220 silly resolved     author: { name: 'Chrome Developer Relations' },
+220 silly resolved     main: 'app/index.js',
+220 silly resolved     repository:
+220 silly resolved      { type: 'git',
+220 silly resolved        url: 'git://github.com/yeoman/generator-polymer.git' },
+220 silly resolved     scripts: { test: 'mocha --reporter spec' },
+220 silly resolved     dependencies:
+220 silly resolved      { chalk: '^0.5.1',
+220 silly resolved        lodash: '^2.4.1',
+220 silly resolved        ncp: '^0.6.0',
+220 silly resolved        rimraf: '^2.2.8',
+220 silly resolved        'underscore.string': '^2.3.3',
+220 silly resolved        'yeoman-generator': '^0.17.2',
+220 silly resolved        yosay: '^1.0.0' },
+220 silly resolved     peerDependencies: { 'generator-mocha': '>=0.1.3', yo: '>=1.0.0' },
+220 silly resolved     devDependencies: { mocha: '*' },
+220 silly resolved     engines: { node: '>=0.10.0', npm: '>=1.2.10' },
+220 silly resolved     licenses: [ [Object] ],
+220 silly resolved     readme: '[![NPM version](http://img.shields.io/npm/v/generator-polymer.svg?style=flat)](http://npmjs.org/generator-polymer)\n[![NPM downloads](http://img.shields.io/npm/dm/generator-polymer.svg?style=flat)](http://npmjs.org/generator-polymer)\n[![Build Status](http://img.shields.io/travis/yeoman/generator-polymer/master.svg?style=flat)](https://travis-ci.org/yeoman/generator-polymer)\n[![Dependency Status](http://img.shields.io/david/yeoman/generator-polymer.svg?style=flat)](https://david-dm.org/yeoman/generator-polymer)\n\n## Yeoman generator for Polymer projects\n\n<img src="http://i.imgur.com/dsFChIk.png"/>\n\n## Introduction\n\n[Polymer](http://www.polymer-project.org/) is a library of polyfills and sugar which enable the use of Web Components in modern browsers. The project allows developers to build apps using the platform of tomorrow and inform the W3C of places where in-flight specifications can be further improved.\n\n`generator-polymer` provides Polymer scaffolding using [Yeoman](http://yeoman.io) (a scaffolding tool for the web), letting you easily create and customize Polymer (custom) elements via the command-line and import them using HTML Imports. This saves you time writing boilerplate code so you can start writing up the logic to your components straight away.\n\n## Features\n\n* A Polymer app scaffold built with HTML5 Boilerplate\n* Sub-generator to create Polymer elements for your app\n* Boilerplate to create reusable Polymer elements\n* Quick deploy to GitHub pages\n* All the goodness of `seed-element` (docs & landing page for your element)\n* Support for SASS/SCSS and Autoprefixer\n* PageSpeed Insights for performance tuning\n* Mocha test stubs\n\n## Installation\n\nInstall the generator\n`npm install -g generator-polymer`\n\nMake a new directory and cd into it\n`mkdir -p my-project && cd $_`\n\nScaffold a new Polymer project:\n`yo polymer`\n\n## Generators\n\nAvailable generators:\n\n- [polymer (aka polymer:app)](#app)\n- [polymer:el](#el)\n- [polymer:seed](#seed)\n- [polymer:gh](#gh)\n\n**Note: Generators are to be run from the root of your app**\n\n### App\nSets up a new Polymer app, generating all the boilerplate you need to get started.\n\nExample:\n```bash\nyo polymer\n```\n\n### El\nGenerates a polymer element in `app/elements` and appends an import to `app/elements/elements.html`.\n\nExample:\n```bash\nyo polymer:el my-element\n```\n\n**Note: You must pass in an element name, and the name must contain a dash "-"**\n\n### Seed\nGenerates a reusable polymer element based on the [seed-element workflow](http://www.polymer-project.org/docs/start/reusableelements.html). **This should only be used if you\'re creating a standalone element repo that you intend to share with others via bower.** If you\'re just building a Polymer app, stick to the [El](#el) generator.\n\nTo create a seed-element you\'ll first need to create a parent directory, then a sub directory to hold your seed-element. All bower dependencies will be installed into the parent directory. Please follow the [seed-element guide](http://www.polymer-project.org/docs/start/reusableelements.html) for more instructions.\n\nExample:\n```bash\nmkdir -p components/x-foo && cd $_\nyo polymer:seed\n```\n\n### Gh\nGenerates a Github pages branch for your [seed-element](#seed).\n\nExample:\n```bash\ncd components/x-foo\nyo polymer:gh\n```\n\n## Gotchas\n\n### Autoprefixer and style elements\n\nThe Autoprefixer task will not work with `style` elements mixed into HTML files (it breaks). Meaning, if you drop a style tag inside of your Polymer element, it will not be processed by Autoprefixer. **Only external CSS files can/will be processed by Autoprefixer**.\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)\n\nWhen submitting an issue, please follow the [guidelines](https://github.com/yeoman/yeoman/blob/master/contributing.md#issue-submission). Especially important is to make sure Yeoman is up-to-date, and providing the command or commands that cause the issue.\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n',
+220 silly resolved     readmeFilename: 'readme.md',
+220 silly resolved     _id: 'generator-polymer@0.5.1',
+220 silly resolved     dist: { shasum: '147d34109205d6f12979daf179d2e8ccf0286f08' },
+220 silly resolved     _from: 'generator-polymer' } ]
+221 info install generator-polymer@0.5.1 into C:\Users\DV6\AppData\Roaming\npm
+222 info installOne generator-polymer@0.5.1
+223 warn engine generator-polymer@0.5.1: wanted: {"node":">=0.10.0","npm":">=1.2.10"} (current: {"node":"v0.8.17","npm":"1.2.0"})
+224 verbose from cache C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package\package.json
+225 info C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer unbuild
+226 verbose read json C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer\package.json
+227 verbose tar unpack C:\Users\DV6\AppData\Roaming\npm-cache\generator-polymer\0.5.1\package.tgz
+228 silly lockFile 542701be-m-node-modules-generator-polymer C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer
+229 verbose lock C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer C:\Users\DV6\AppData\Roaming\npm-cache\542701be-m-node-modules-generator-polymer.lock
+230 silly gunzTarPerm modes [ '755', '644' ]
+231 silly gunzTarPerm extractEntry package.json
+232 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+233 silly gunzTarPerm extractEntry script-base.js
+234 silly gunzTarPerm modified mode [ 'script-base.js', 438, 420 ]
+235 silly gunzTarPerm extractEntry util.js
+236 silly gunzTarPerm modified mode [ 'util.js', 438, 420 ]
+237 silly gunzTarPerm extractEntry app/index.js
+238 silly gunzTarPerm modified mode [ 'app/index.js', 438, 420 ]
+239 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+240 silly gunzTarPerm modified mode [ 'app/templates/Gruntfile.js', 438, 420 ]
+241 silly gunzTarPerm extractEntry app/templates/app/app.js
+242 silly gunzTarPerm modified mode [ 'app/templates/app/app.js', 438, 420 ]
+243 silly gunzTarPerm extractEntry app/templates/app/main.css
+244 silly gunzTarPerm modified mode [ 'app/templates/app/main.css', 438, 420 ]
+245 silly gunzTarPerm extractEntry app/templates/app/elements.html
+246 silly gunzTarPerm modified mode [ 'app/templates/app/elements.html', 438, 420 ]
+247 silly gunzTarPerm extractEntry app/templates/app/favicon.ico
+248 silly gunzTarPerm modified mode [ 'app/templates/app/favicon.ico', 438, 420 ]
+249 silly gunzTarPerm extractEntry app/templates/app/htaccess
+250 silly gunzTarPerm modified mode [ 'app/templates/app/htaccess', 438, 420 ]
+251 silly gunzTarPerm extractEntry app/templates/app/index.html
+252 silly gunzTarPerm modified mode [ 'app/templates/app/index.html', 438, 420 ]
+253 silly gunzTarPerm extractEntry app/templates/app/404.html
+254 silly gunzTarPerm modified mode [ 'app/templates/app/404.html', 438, 420 ]
+255 silly gunzTarPerm extractEntry app/templates/app/robots.txt
+256 silly gunzTarPerm modified mode [ 'app/templates/app/robots.txt', 438, 420 ]
+257 silly gunzTarPerm extractEntry app/templates/app/yo-greeting.css
+258 silly gunzTarPerm modified mode [ 'app/templates/app/yo-greeting.css', 438, 420 ]
+259 silly gunzTarPerm extractEntry app/templates/app/yo-greeting.html
+260 silly gunzTarPerm modified mode [ 'app/templates/app/yo-greeting.html', 438, 420 ]
+261 silly gunzTarPerm extractEntry app/templates/app/yo-list.css
+262 silly gunzTarPerm modified mode [ 'app/templates/app/yo-list.css', 438, 420 ]
+263 silly gunzTarPerm extractEntry app/templates/app/yo-list.html
+264 silly gunzTarPerm modified mode [ 'app/templates/app/yo-list.html', 438, 420 ]
+265 silly gunzTarPerm extractEntry app/templates/bowerrc
+266 silly gunzTarPerm modified mode [ 'app/templates/bowerrc', 438, 420 ]
+267 silly gunzTarPerm extractEntry app/templates/editorconfig
+268 silly gunzTarPerm modified mode [ 'app/templates/editorconfig', 438, 420 ]
+269 silly gunzTarPerm extractEntry app/templates/gitattributes
+270 silly gunzTarPerm modified mode [ 'app/templates/gitattributes', 438, 420 ]
+271 silly gunzTarPerm extractEntry app/templates/gitignore
+272 silly gunzTarPerm modified mode [ 'app/templates/gitignore', 438, 420 ]
+273 silly gunzTarPerm extractEntry app/templates/jshintrc
+274 silly gunzTarPerm modified mode [ 'app/templates/jshintrc', 438, 420 ]
+275 silly gunzTarPerm extractEntry app/templates/test/index.html
+276 silly gunzTarPerm modified mode [ 'app/templates/test/index.html', 438, 420 ]
+277 silly gunzTarPerm extractEntry app/templates/test/tests.html
+278 silly gunzTarPerm modified mode [ 'app/templates/test/tests.html', 438, 420 ]
+279 silly gunzTarPerm extractEntry app/templates/test/yo-greeting-basic.html
+280 silly gunzTarPerm modified mode [ 'app/templates/test/yo-greeting-basic.html', 438, 420 ]
+281 silly gunzTarPerm extractEntry app/templates/test/yo-list-basic.html
+282 silly gunzTarPerm modified mode [ 'app/templates/test/yo-list-basic.html', 438, 420 ]
+283 silly gunzTarPerm extractEntry app/templates/_bower.json
+284 silly gunzTarPerm modified mode [ 'app/templates/_bower.json', 438, 420 ]
+285 silly gunzTarPerm extractEntry app/templates/_package.json
+286 silly gunzTarPerm modified mode [ 'app/templates/_package.json', 438, 420 ]
+287 silly gunzTarPerm extractEntry changelog.md
+288 silly gunzTarPerm modified mode [ 'changelog.md', 438, 420 ]
+289 silly gunzTarPerm extractEntry el/index.js
+290 silly gunzTarPerm modified mode [ 'el/index.js', 438, 420 ]
+291 silly gunzTarPerm extractEntry el/templates/_element.css
+292 silly gunzTarPerm modified mode [ 'el/templates/_element.css', 438, 420 ]
+293 silly gunzTarPerm extractEntry el/templates/_element.html
+294 silly gunzTarPerm modified mode [ 'el/templates/_element.html', 438, 420 ]
+295 silly gunzTarPerm extractEntry gh/index.js
+296 silly gunzTarPerm modified mode [ 'gh/index.js', 438, 420 ]
+297 silly gunzTarPerm extractEntry gh/templates/gp.sh
+298 silly gunzTarPerm modified mode [ 'gh/templates/gp.sh', 438, 420 ]
+299 silly gunzTarPerm extractEntry readme.md
+300 silly gunzTarPerm modified mode [ 'readme.md', 438, 420 ]
+301 silly gunzTarPerm extractEntry seed/index.js
+302 silly gunzTarPerm modified mode [ 'seed/index.js', 438, 420 ]
+303 silly gunzTarPerm extractEntry seed/templates/_bower.json
+304 silly gunzTarPerm modified mode [ 'seed/templates/_bower.json', 438, 420 ]
+305 silly gunzTarPerm extractEntry seed/templates/bowerrc
+306 silly gunzTarPerm modified mode [ 'seed/templates/bowerrc', 438, 420 ]
+307 silly gunzTarPerm extractEntry seed/templates/gitattributes
+308 silly gunzTarPerm modified mode [ 'seed/templates/gitattributes', 438, 420 ]
+309 silly gunzTarPerm extractEntry seed/templates/gitignore
+310 silly gunzTarPerm modified mode [ 'seed/templates/gitignore', 438, 420 ]
+311 silly gunzTarPerm extractEntry seed/templates/jshintrc
+312 silly gunzTarPerm modified mode [ 'seed/templates/jshintrc', 438, 420 ]
+313 silly gunzTarPerm extractEntry seed/templates/test/index.html
+314 silly gunzTarPerm modified mode [ 'seed/templates/test/index.html', 438, 420 ]
+315 silly gunzTarPerm extractEntry seed/templates/test/seed-element-basic.html
+316 silly gunzTarPerm modified mode [ 'seed/templates/test/seed-element-basic.html', 438, 420 ]
+317 silly gunzTarPerm extractEntry seed/templates/test/tests.html
+318 silly gunzTarPerm modified mode [ 'seed/templates/test/tests.html', 438, 420 ]
+319 silly gunzTarPerm extractEntry seed/templates/editorconfig
+320 silly gunzTarPerm modified mode [ 'seed/templates/editorconfig', 438, 420 ]
+321 silly gunzTarPerm extractEntry seed/templates/_demo.html
+322 silly gunzTarPerm modified mode [ 'seed/templates/_demo.html', 438, 420 ]
+323 silly gunzTarPerm extractEntry seed/templates/_index.html
+324 silly gunzTarPerm modified mode [ 'seed/templates/_index.html', 438, 420 ]
+325 silly gunzTarPerm extractEntry seed/templates/_README.md
+326 silly gunzTarPerm modified mode [ 'seed/templates/_README.md', 438, 420 ]
+327 silly gunzTarPerm extractEntry seed/templates/_seed-element.css
+328 silly gunzTarPerm modified mode [ 'seed/templates/_seed-element.css', 438, 420 ]
+329 silly gunzTarPerm extractEntry seed/templates/_seed-element.html
+330 silly gunzTarPerm modified mode [ 'seed/templates/_seed-element.html', 438, 420 ]
+331 verbose read json C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer\package.json
+332 silly lockFile 542701be-m-node-modules-generator-polymer C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer
+333 info preinstall generator-polymer@0.5.1
+334 verbose from cache C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer\package.json
+335 verbose readDependencies using package.json deps
+336 verbose from cache C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer\package.json
+337 verbose readDependencies using package.json deps
+338 verbose cache add [ 'chalk@^0.5.1', null ]
+339 silly cache add name=undefined spec="chalk@^0.5.1" args=["chalk@^0.5.1",null]
+340 verbose parsed url { pathname: 'chalk@^0.5.1',
+340 verbose parsed url   path: 'chalk@^0.5.1',
+340 verbose parsed url   href: 'chalk@^0.5.1' }
+341 silly cache add name="chalk" spec="^0.5.1" args=["chalk","^0.5.1"]
+342 verbose parsed url { pathname: '^0.5.1', path: '^0.5.1', href: '^0.5.1' }
+343 verbose addNamed [ 'chalk', '^0.5.1' ]
+344 verbose addNamed [ null, null ]
+345 silly lockFile 24b6c7c3-chalk-0-5-1 chalk@^0.5.1
+346 verbose lock chalk@^0.5.1 C:\Users\DV6\AppData\Roaming\npm-cache\24b6c7c3-chalk-0-5-1.lock
+347 verbose cache add [ 'lodash@^2.4.1', null ]
+348 silly cache add name=undefined spec="lodash@^2.4.1" args=["lodash@^2.4.1",null]
+349 verbose parsed url { pathname: 'lodash@^2.4.1',
+349 verbose parsed url   path: 'lodash@^2.4.1',
+349 verbose parsed url   href: 'lodash@^2.4.1' }
+350 silly cache add name="lodash" spec="^2.4.1" args=["lodash","^2.4.1"]
+351 verbose parsed url { pathname: '^2.4.1', path: '^2.4.1', href: '^2.4.1' }
+352 verbose addNamed [ 'lodash', '^2.4.1' ]
+353 verbose addNamed [ null, null ]
+354 silly lockFile 59759450-lodash-2-4-1 lodash@^2.4.1
+355 verbose lock lodash@^2.4.1 C:\Users\DV6\AppData\Roaming\npm-cache\59759450-lodash-2-4-1.lock
+356 verbose cache add [ 'ncp@^0.6.0', null ]
+357 silly cache add name=undefined spec="ncp@^0.6.0" args=["ncp@^0.6.0",null]
+358 verbose parsed url { pathname: 'ncp@^0.6.0',
+358 verbose parsed url   path: 'ncp@^0.6.0',
+358 verbose parsed url   href: 'ncp@^0.6.0' }
+359 silly cache add name="ncp" spec="^0.6.0" args=["ncp","^0.6.0"]
+360 verbose parsed url { pathname: '^0.6.0', path: '^0.6.0', href: '^0.6.0' }
+361 verbose addNamed [ 'ncp', '^0.6.0' ]
+362 verbose addNamed [ null, null ]
+363 silly lockFile 92c092e1-ncp-0-6-0 ncp@^0.6.0
+364 verbose lock ncp@^0.6.0 C:\Users\DV6\AppData\Roaming\npm-cache\92c092e1-ncp-0-6-0.lock
+365 verbose cache add [ 'rimraf@^2.2.8', null ]
+366 silly cache add name=undefined spec="rimraf@^2.2.8" args=["rimraf@^2.2.8",null]
+367 verbose parsed url { pathname: 'rimraf@^2.2.8',
+367 verbose parsed url   path: 'rimraf@^2.2.8',
+367 verbose parsed url   href: 'rimraf@^2.2.8' }
+368 silly cache add name="rimraf" spec="^2.2.8" args=["rimraf","^2.2.8"]
+369 verbose parsed url { pathname: '^2.2.8', path: '^2.2.8', href: '^2.2.8' }
+370 verbose addNamed [ 'rimraf', '^2.2.8' ]
+371 verbose addNamed [ null, null ]
+372 silly lockFile e7d3f915-rimraf-2-2-8 rimraf@^2.2.8
+373 verbose lock rimraf@^2.2.8 C:\Users\DV6\AppData\Roaming\npm-cache\e7d3f915-rimraf-2-2-8.lock
+374 verbose cache add [ 'underscore.string@^2.3.3', null ]
+375 silly cache add name=undefined spec="underscore.string@^2.3.3" args=["underscore.string@^2.3.3",null]
+376 verbose parsed url { pathname: 'underscore.string@^2.3.3',
+376 verbose parsed url   path: 'underscore.string@^2.3.3',
+376 verbose parsed url   href: 'underscore.string@^2.3.3' }
+377 silly cache add name="underscore.string" spec="^2.3.3" args=["underscore.string","^2.3.3"]
+378 verbose parsed url { pathname: '^2.3.3', path: '^2.3.3', href: '^2.3.3' }
+379 verbose addNamed [ 'underscore.string', '^2.3.3' ]
+380 verbose addNamed [ null, null ]
+381 silly lockFile 530107f5-underscore-string-2-3-3 underscore.string@^2.3.3
+382 verbose lock underscore.string@^2.3.3 C:\Users\DV6\AppData\Roaming\npm-cache\530107f5-underscore-string-2-3-3.lock
+383 verbose cache add [ 'yeoman-generator@^0.17.2', null ]
+384 silly cache add name=undefined spec="yeoman-generator@^0.17.2" args=["yeoman-generator@^0.17.2",null]
+385 verbose parsed url { pathname: 'yeoman-generator@^0.17.2',
+385 verbose parsed url   path: 'yeoman-generator@^0.17.2',
+385 verbose parsed url   href: 'yeoman-generator@^0.17.2' }
+386 silly cache add name="yeoman-generator" spec="^0.17.2" args=["yeoman-generator","^0.17.2"]
+387 verbose parsed url { pathname: '^0.17.2', path: '^0.17.2', href: '^0.17.2' }
+388 verbose addNamed [ 'yeoman-generator', '^0.17.2' ]
+389 verbose addNamed [ null, null ]
+390 silly lockFile 81c4e806-yeoman-generator-0-17-2 yeoman-generator@^0.17.2
+391 verbose lock yeoman-generator@^0.17.2 C:\Users\DV6\AppData\Roaming\npm-cache\81c4e806-yeoman-generator-0-17-2.lock
+392 verbose cache add [ 'yosay@^1.0.0', null ]
+393 silly cache add name=undefined spec="yosay@^1.0.0" args=["yosay@^1.0.0",null]
+394 verbose parsed url { pathname: 'yosay@^1.0.0',
+394 verbose parsed url   path: 'yosay@^1.0.0',
+394 verbose parsed url   href: 'yosay@^1.0.0' }
+395 silly cache add name="yosay" spec="^1.0.0" args=["yosay","^1.0.0"]
+396 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+397 verbose addNamed [ 'yosay', '^1.0.0' ]
+398 verbose addNamed [ null, null ]
+399 silly lockFile 39094cbc-yosay-1-0-0 yosay@^1.0.0
+400 verbose lock yosay@^1.0.0 C:\Users\DV6\AppData\Roaming\npm-cache\39094cbc-yosay-1-0-0.lock
+401 info addNameTag [ 'chalk', '^0.5.1' ]
+402 info addNameTag [ 'lodash', '^2.4.1' ]
+403 info addNameTag [ 'ncp', '^0.6.0' ]
+404 info addNameTag [ 'rimraf', '^2.2.8' ]
+405 info addNameTag [ 'underscore.string', '^2.3.3' ]
+406 info addNameTag [ 'yeoman-generator', '^0.17.2' ]
+407 info addNameTag [ 'yosay', '^1.0.0' ]
+408 verbose url raw yosay
+409 verbose url resolving [ 'http://registry.npmjs.org/', './yosay' ]
+410 verbose url resolved http://registry.npmjs.org/yosay
+411 info trying registry request attempt 1 at 22:24:20
+412 http GET http://registry.npmjs.org/yosay
+413 verbose url raw chalk
+414 verbose url resolving [ 'http://registry.npmjs.org/', './chalk' ]
+415 verbose url resolved http://registry.npmjs.org/chalk
+416 info trying registry request attempt 1 at 22:24:20
+417 verbose etag "3G1W2T361BOXQO0DHPNGVC6IQ"
+418 http GET http://registry.npmjs.org/chalk
+419 verbose url raw lodash
+420 verbose url resolving [ 'http://registry.npmjs.org/', './lodash' ]
+421 verbose url resolved http://registry.npmjs.org/lodash
+422 info trying registry request attempt 1 at 22:24:20
+423 verbose etag "DG2IU7C77I6YRLSCHOCL9YML0"
+424 http GET http://registry.npmjs.org/lodash
+425 verbose url raw underscore.string
+426 verbose url resolving [ 'http://registry.npmjs.org/', './underscore.string' ]
+427 verbose url resolved http://registry.npmjs.org/underscore.string
+428 info trying registry request attempt 1 at 22:24:20
+429 verbose etag "BQDEERHQI4XYBD16OF3QOTAM2"
+430 http GET http://registry.npmjs.org/underscore.string
+431 verbose url raw yeoman-generator
+432 verbose url resolving [ 'http://registry.npmjs.org/', './yeoman-generator' ]
+433 verbose url resolved http://registry.npmjs.org/yeoman-generator
+434 info trying registry request attempt 1 at 22:24:20
+435 verbose etag "87UBZ88DV8GEHCGNOZO9BF7RB"
+436 http GET http://registry.npmjs.org/yeoman-generator
+437 verbose url raw ncp
+438 verbose url resolving [ 'http://registry.npmjs.org/', './ncp' ]
+439 verbose url resolved http://registry.npmjs.org/ncp
+440 info trying registry request attempt 1 at 22:24:20
+441 verbose etag "C7464TO8R5VVXQRAK18ZO3CPL"
+442 http GET http://registry.npmjs.org/ncp
+443 verbose url raw rimraf
+444 verbose url resolving [ 'http://registry.npmjs.org/', './rimraf' ]
+445 verbose url resolved http://registry.npmjs.org/rimraf
+446 info trying registry request attempt 1 at 22:24:20
+447 verbose etag "8X2NFFGY1QUAF1POI905M0TNR"
+448 http GET http://registry.npmjs.org/rimraf
+449 http 304 http://registry.npmjs.org/chalk
+450 silly registry.get cb [ 304,
+450 silly registry.get   { date: 'Thu, 06 Nov 2014 03:24:21 GMT',
+450 silly registry.get     via: '1.1 varnish',
+450 silly registry.get     'last-modified': 'Thu, 06 Nov 2014 03:24:21 GMT',
+450 silly registry.get     'cache-control': 'max-age=60',
+450 silly registry.get     etag: '"3G1W2T361BOXQO0DHPNGVC6IQ"',
+450 silly registry.get     age: '9',
+450 silly registry.get     connection: 'keep-alive',
+450 silly registry.get     'x-served-by': 'cache-atl6233-ATL',
+450 silly registry.get     'x-cache': 'HIT',
+450 silly registry.get     'x-cache-hits': '1',
+450 silly registry.get     'x-timer': 'S1415244261.888797,VS0,VE1',
+450 silly registry.get     vary: 'Accept' } ]
+451 verbose etag chalk from cache
+452 http 304 http://registry.npmjs.org/lodash
+453 silly registry.get cb [ 304,
+453 silly registry.get   { date: 'Thu, 06 Nov 2014 03:24:21 GMT',
+453 silly registry.get     via: '1.1 varnish',
+453 silly registry.get     'last-modified': 'Thu, 06 Nov 2014 03:24:08 GMT',
+453 silly registry.get     'cache-control': 'max-age=60',
+453 silly registry.get     etag: '"DG2IU7C77I6YRLSCHOCL9YML0"',
+453 silly registry.get     age: '26',
+453 silly registry.get     connection: 'keep-alive',
+453 silly registry.get     'x-served-by': 'cache-atl6224-ATL',
+453 silly registry.get     'x-cache': 'HIT',
+453 silly registry.get     'x-cache-hits': '2',
+453 silly registry.get     'x-timer': 'S1415244261.892036,VS0,VE0',
+453 silly registry.get     vary: 'Accept' } ]
+454 verbose etag lodash from cache
+455 silly lockFile 24b6c7c3-chalk-0-5-1 chalk@^0.5.1
+456 silly lockFile 59759450-lodash-2-4-1 lodash@^2.4.1
+457 verbose about to build C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer
+458 info C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer unbuild
+459 verbose from cache C:\Users\DV6\AppData\Roaming\npm\node_modules\generator-polymer\package.json
+460 info preuninstall generator-polymer@0.5.1
+461 info uninstall generator-polymer@0.5.1
+462 verbose true,C:\Users\DV6\AppData\Roaming\npm\node_modules,C:\Users\DV6\AppData\Roaming\npm\node_modules unbuild generator-polymer@0.5.1
+463 info postuninstall generator-polymer@0.5.1
+464 error Error: No compatible version found: chalk@'^0.5.1'
+464 error Valid install targets:
+464 error ["0.1.0","0.1.1","0.2.0","0.2.1","0.3.0","0.4.0","0.5.0","0.5.1"]
+464 error     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache.js:564:10)
+464 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache.js:479:10
+464 error     at saved (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:138:7)
+464 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:218:7
+464 error     at Object.oncomplete (fs.js:297:15)
+465 error If you need help, you may report this log at:
+465 error     <http://github.com/isaacs/npm/issues>
+465 error or email it to:
+465 error     <npm-@googlegroups.com>
+466 error System Windows_NT 6.1.7601
+467 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "generator-polymer" "-g"
+468 error cwd C:\wamp\www\backbone\backboneros
+469 error node -v v0.8.17
+470 error npm -v 1.2.0
+471 verbose exit [ 1, true ]
