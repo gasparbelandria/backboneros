@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'views/content/categoryView', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
 
-function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
+function($, _, Backbone, Markdown, AppConfig, CategoryView, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
 
     var HomeView = Backbone.View.extend({
 
@@ -44,6 +44,9 @@ function($, _, Backbone, Markdown, AppConfig, Posts, meny, SidebarView, ArticleV
                 this.renderArticle( item );
             }, this);    
             
+            // Category
+            var categoryView = new categoryView();
+
         },
 
         renderArticle: function( item ){
