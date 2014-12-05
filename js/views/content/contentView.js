@@ -1,6 +1,6 @@
-define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'views/content/categoryView', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
+define([ 'jquery', 'underscore', 'backbone', 'markdown', 'models/app/AppConfig', 'collections/posts/categories', 'collections/posts/posts', 'libs/meny/meny.min', 'views/sidebar/sidebarView', 'views/content/categoryView', 'views/article/articleView', 'text!templates/content/contentTemplate.html' ], 
 
-function($, _, Backbone, Markdown, AppConfig, CategoryView, Posts, meny, SidebarView, ArticleView, ContentTemplate) {
+function($, _, Backbone, Markdown, AppConfig, Categories, Posts, meny, SidebarView, CategoryView, ArticleView, ContentTemplate) {
 
     var HomeView = Backbone.View.extend({
 
@@ -11,16 +11,23 @@ function($, _, Backbone, Markdown, AppConfig, CategoryView, Posts, meny, Sidebar
         initialize : function() {
             var that = this;
             this.config = new AppConfig();
-            this.collection = new Posts();
-            this.listenTo(this.collection, 'reset', this.render);
-            this.collection.fetch({reset: true});
+            
+            // Categories
+            this.collectionCategories = new Categories();
+            this.listenTo(this.collectionCategories, 'reset', this.renderCategories);
+            this.collectionCategories.fetch({reset: true});
+            
+            // Post
+            this.collectionPost = new Posts();
+            this.listenTo(this.collectionPost, 'reset', this.renderPost);
+            this.collectionPost.fetch({reset: true});
         },
 
         events : {
             //'click .slug': 'showArticle'
         },
 
-        render : function() {
+        renderCategories : function() {
             var that = this;
 
             // Sidebar
@@ -28,11 +35,30 @@ function($, _, Backbone, Markdown, AppConfig, CategoryView, Posts, meny, Sidebar
             sidebarView.render();
             this.meny();
 
+            // Content
+            $(this.el).empty();
+            this.collectionCategories.each(function( item ){
+                this.renderCategory( item );
+            }, this);    
+        },
+
+        renderCategory: function( item ){
+            console.log(item);
+            var categoryView = new CategoryView({
+                model:item
+            });
+            this.$el.append( categoryView.render().el );
+        },
+
+
+        renderPost : function() {
+            var that = this;
+
             var months = new Array("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic");
 
             // Content
             $(this.el).empty();
-            this.collection.each(function( item ){
+            this.collectionPost.each(function( item ){
                 item.attributes.summary = marked(item.attributes.summary); // parse markdown
 
                 var d = new Date(item.attributes.created*1000);
@@ -44,9 +70,6 @@ function($, _, Backbone, Markdown, AppConfig, CategoryView, Posts, meny, Sidebar
                 this.renderArticle( item );
             }, this);    
             
-            // Category
-            var categoryView = new CategoryView();
-
         },
 
         renderArticle: function( item ){
