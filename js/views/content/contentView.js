@@ -45,7 +45,7 @@ function($, _, Backbone, Markdown, AppConfig, CategoryView, Posts, meny, Sidebar
             }, this);    
             
             // Category
-            var categoryView = new categoryView();
+            var categoryView = new CategoryView();
 
         },
 

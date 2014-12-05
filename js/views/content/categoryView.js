@@ -14,15 +14,14 @@ define([
 		template: _.template( CategoryTemplate ),
 
         initialize : function() {
-			alert('a');
             var that = this;
             this.collection = new Categories();
+            console.log(this.collection);
             this.listenTo(this.collection, 'reset', this.render);
             this.collection.fetch({reset: true});
         },
 
 		render: function(){
-			console.log(this.collection);
 			//this.$el.html( this.template( this.model.attributes ) );
 			return this;
 		}
