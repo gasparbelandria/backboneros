@@ -19,12 +19,13 @@ function($, _, Backbone, Markdown, AppConfig, Categories, Posts, meny, SidebarVi
             
             // Post
             this.collectionPost = new Posts();
+            console.log(this.collectionPost);
             this.listenTo(this.collectionPost, 'reset', this.renderPost);
             this.collectionPost.fetch({reset: true});
         },
 
         events : {
-            //'click .slug': 'showArticle'
+            //'click .categories': 'handleFilter'
         },
 
         renderCategories : function() {
@@ -43,7 +44,6 @@ function($, _, Backbone, Markdown, AppConfig, Categories, Posts, meny, SidebarVi
         },
 
         renderCategory: function( item ){
-            console.log(item);
             var categoryView = new CategoryView({
                 model:item
             });
@@ -57,7 +57,6 @@ function($, _, Backbone, Markdown, AppConfig, Categories, Posts, meny, SidebarVi
             var months = new Array("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic");
 
             // Content
-            $(this.el).empty();
             this.collectionPost.each(function( item ){
                 item.attributes.summary = marked(item.attributes.summary); // parse markdown
 

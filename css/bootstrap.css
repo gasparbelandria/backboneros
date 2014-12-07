@@ -119,6 +119,10 @@ textarea {
   vertical-align: top;
 }
 
+.clear {
+  clear: both;
+}
+
 .clearfix {
   *zoom: 1;
 }
@@ -4957,4 +4961,14 @@ a.badge:hover {
 
 .invisible {
   visibility: hidden;
+}
+
+/*
+CUSTOM STYLES
+*/
+
+.categories{
+  float:left; 
+  margin-left:10px; 
+  margin-bottom:10px;
 }
