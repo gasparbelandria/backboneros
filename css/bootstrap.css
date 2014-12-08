@@ -4972,3 +4972,8 @@ CUSTOM STYLES
   margin-left:10px; 
   margin-bottom:10px;
 }
+
+.deactive{
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* msie */
+}

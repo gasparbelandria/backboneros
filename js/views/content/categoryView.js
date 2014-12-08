@@ -23,13 +23,15 @@ define([
         },
 
         handleFilter: function(e) {
-            //console.log(e.target.attributes[1].value);
+            if ($(e.target).hasClass('deactive')){
+            	$(e.target).removeClass('deactive');
+            }else{
+            	$(e.target).addClass('deactive');
+            }
             $('.clear').each(function(){
-            	//console.log($(this).attr('data-category'));
             	if (e.target.attributes[1].value === $(this).attr('data-category')){
-            		if ($(this).hasClass('deactive')){
-            			console.log('deactivate');
-            			$(this).removeClass('deactive');
+            		if ($(this).hasClass('removed')){
+            			$(this).removeClass('removed');
 						$(this).animate({
 							opacity: 1,
 							left: "-=50",
@@ -38,8 +40,7 @@ define([
 							console.log('Animation complete');
 						});
             		}else{
-            			console.log('activate');
-						$(this).addClass('deactive');
+						$(this).addClass('removed');
 						$(this).animate({
 							opacity: 0.25,
 							left: "+=50",
@@ -48,7 +49,6 @@ define([
 							console.log('Animation complete');
 						});
             		}
-
             	}
             });
         },		
